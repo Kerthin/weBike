@@ -7,7 +7,7 @@ html(lang="ru-RU")
 			.swiper-wrapper
 				.swiper-slide
 					header.header
-						.header__logoWrapper
+						.header__logoWrap
 							.header__logo
 								p.header__logoText WE BIKE
 						nav.horizontalNav.header__horizontalNav
@@ -16,9 +16,12 @@ html(lang="ru-RU")
 									li.horizontalNav__listItem
 										a(class="horizontalNav__itemLink" href=(`${link}`))= nameLink
 								+horizontalListItemMix('#', 'bike')
-								+horizontalListItemMix('#', 'bike')
-								+horizontalListItemMix('#', 'bike')
-								+horizontalListItemMix('#', 'bike')
-								+horizontalListItemMix('#', 'bike')
+								+horizontalListItemMix('#', 'outdoor')
+								+horizontalListItemMix('#', 'streewear')
+								+horizontalListItemMix('#', 'running')
+								+horizontalListItemMix('#', 'ski')
+						ul.header__myAccountWrap
+							li.header__myAccountWrap
+								a(class="header__myAccountText" href="#") My account
 				.swiper-slide
 		include template/scripts.pug
