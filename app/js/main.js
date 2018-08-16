@@ -12,3 +12,8 @@
 	mousewheelSwiperInitializations.js
 ********************/
 //= partials/mousewheelSwiperInitializations.js
+
+/********************
+	burgerMenu.js
+********************/
+//= partials/burgerMenu.js

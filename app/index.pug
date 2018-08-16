@@ -23,5 +23,11 @@ html(lang="ru-RU")
 						ul.header__myAccountWrap
 							li.header__myAccountWrap
 								a(class="header__myAccountText" href="#") My account
+						- var x = 9;
+						.burgerMenuWrap.header__burgerMenuWrap
+							ul.burgerMenuWrap__burgerMenu
+								- for (var i=1; i<=x; i++) {
+									.burgerMenuWrap__item
+								- }
 				.swiper-slide
 		include template/scripts.pug
