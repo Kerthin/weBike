@@ -48,5 +48,41 @@ body {
 				}
 			}
     	}
+
+    	.header__horizontalNav {
+    		&.horizontalNav {
+				display: block;
+				float: left;
+				width: 40%;
+				height: 100%;
+				background-color: orange;
+
+				.horizontalNav__list {
+					width: 100%;
+					height: 100%;
+
+					.horizontalNav__listItem {
+						display: block;
+						float: left;
+						width: 20%;
+						height: 100%;
+						position: relative;
+
+						.horizontalNav__itemLink {
+							width: 100%;
+							margin-top: 5vh;
+							display: block;
+							color: #f2ebdd;
+							text-align: center;
+							text-decoration: none;
+							font-family: Montserrat Black, sans-serif;
+							font-weight: 600;
+							font-size: 1.5vmin;
+							transition: all .5s;
+						}
+					}
+				}
+    		}
+    	}
     }
 }
