@@ -3,7 +3,7 @@ html(lang="ru-RU")
 	head
 		include template/head.pug
 	body
-		.swiper-container
+		.swiper-container.swiper-container-mousewheel
 			.swiper-wrapper
 				.swiper-slide
 					.humburgerPopupMenu
@@ -32,6 +32,17 @@ html(lang="ru-RU")
 								- }
 					section.mainContent
 						.mainContent__slider
+							.swiper-container.swiper-container-paralax
+								.swiper-wrapper
+									mixin swiperParalax(img, swiperParalaxTitle, swiperParalaxSubtitle, swiperParalaxText)
+										div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
+											.title(data-swiper-parallax="-400")= swiperParalaxTitle
+											.subtitle(data-swiper-parallax="-300")= swiperParalaxSubtitle
+											.text(data-swiper-parallax="-200")
+												p= swiperParalaxText
+									+swiperParalax('greenBikeInverse', 'Cannondale', 'Mountain Biking is an active recreation and adventure.', '')
+									+swiperParalax('redBikeInverse', 'Colnago', 'Designed and built by hand in Italy.', '')
+									+swiperParalax('whiteBikeInverse', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
 						.mainContent__informationWrap
 				.swiper-slide
 		include template/scripts.pug

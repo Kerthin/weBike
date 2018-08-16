@@ -14,6 +14,11 @@
 //= partials/mousewheelSwiperInitializations.js
 
 /********************
+	paralaxSwiperInitializations.js
+********************/
+//= partials/paralaxSwiperInitializations.js
+
+/********************
 	burgerMenu.js
 ********************/
 //= partials/burgerMenu.js

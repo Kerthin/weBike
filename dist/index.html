@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="swiper-container">
+    <div class="swiper-container swiper-container-mousewheel">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="humburgerPopupMenu"></div>
@@ -53,7 +53,34 @@
             </div>
           </header>
           <section class="mainContent">
-            <div class="mainContent__slider"></div>
+            <div class="mainContent__slider">
+              <div class="swiper-container swiper-container-paralax">
+                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-wrapper_bg swiper-wrapper_bg_greenBikeInverse">
+                                      <div class="title" data-swiper-parallax="-400">Cannondale</div>
+                                      <div class="subtitle" data-swiper-parallax="-300">Mountain Biking is an active recreation and adventure.</div>
+                                      <div class="text" data-swiper-parallax="-200">
+                                        <p></p>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-wrapper_bg swiper-wrapper_bg_redBikeInverse">
+                                      <div class="title" data-swiper-parallax="-400">Colnago</div>
+                                      <div class="subtitle" data-swiper-parallax="-300">Designed and built by hand in Italy.</div>
+                                      <div class="text" data-swiper-parallax="-200">
+                                        <p></p>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-wrapper_bg swiper-wrapper_bg_whiteBikeInverse">
+                                      <div class="title" data-swiper-parallax="-400">Pinarello</div>
+                                      <div class="subtitle" data-swiper-parallax="-300">The Pinarello Bicycle is a symbiosis of stylish modern design.</div>
+                                      <div class="text" data-swiper-parallax="-200">
+                                        <p></p>
+                                      </div>
+                                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="mainContent__informationWrap"></div>
           </section>
         </div>
         <div class="swiper-slide"></div>

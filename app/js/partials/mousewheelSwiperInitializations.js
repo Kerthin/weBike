@@ -1,4 +1,4 @@
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container-mousewheel', {
     direction: 'vertical',
     slidesPerView: 1,
     spaceBetween: 30,

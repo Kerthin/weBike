@@ -63,76 +63,112 @@ $white: #ffffff;
 	width: 100%;
 	height: 100vh;
 	background-color: #517C63;
-	transition: all 0.5s;
+	transition: all 0.8s;
 	top: -100%;
-	
+
 	&_active	{
 		top:	0%;
 		z-index: 888;
 	}
 }
-.swiper-container {
+.swiper-container-mousewheel {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-}
-.swiper-slide {
-    background-image: url('../image/bg1920x1080.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
-    .header {
-    	width: 100%;
-    	height: 10vh;
+	.swiper-slide {
+	    background-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+		
+		&:nth-of-type(1) {
+			background-image: url('../image/bg1920x1080.png');
 
-    	.header__logoWrap {
-			display: block;
-			float: left;
-			width: 20%;
-			height: 100%;
-			
-			.header__logo {
-				margin-top: 2.5vh;
-				margin-left: 30%;
-				border: 3px solid #f2ebdd;
-				width: 70px;
-				height: 70px;
+			.header {
+		    	width: 100%;
+		    	height: 10vh;
 
-				.header__logoText {
-					font-family: Montserrat Black, sans-serif;
-					font-weight: 600;
-					margin-top: 15px;
-					margin-left: 10px;
-					color: #F2EBDD;
-				}
-			}
-    	}
-
-    	.header__horizontalNav {
-    		&.horizontalNav {
-				display: block;
-				float: left;
-				width: 40%;
-				height: 100%;
-
-				.horizontalNav__list {
-					width: 100%;
+		    	.header__logoWrap {
+					display: block;
+					float: left;
+					width: 20%;
 					height: 100%;
+					
+					.header__logo {
+						margin-top: 2.5vh;
+						margin-left: 30%;
+						border: 3px solid #f2ebdd;
+						width: 70px;
+						height: 70px;
 
-					.horizontalNav__listItem {
+						.header__logoText {
+							font-family: Montserrat Black, sans-serif;
+							font-weight: 600;
+							margin-top: 15px;
+							margin-left: 10px;
+							color: #F2EBDD;
+						}
+					}
+		    	}
+
+		    	.header__horizontalNav {
+		    		&.horizontalNav {
 						display: block;
 						float: left;
-						width: 20%;
+						width: 40%;
+						height: 100%;
+
+						.horizontalNav__list {
+							width: 100%;
+							height: 100%;
+
+							.horizontalNav__listItem {
+								display: block;
+								float: left;
+								width: 20%;
+								height: 100%;
+								position: relative;
+
+								.horizontalNav__itemLink {
+									width: 100%;
+									margin-top: 5vh;
+									display: block;
+									color: #f2ebdd;
+									text-align: center;
+									text-decoration: none;
+									font-family: Montserrat Black, sans-serif;
+									font-weight: 600;
+									font-size: 1.5vmin;
+									transition: all .5s;
+
+									&:hover {
+										color: #e8ab56;
+									}
+								}
+							}
+						}
+		    		}
+		    	}
+
+		    	.header__myAccountWrap {
+		    		display: block;
+					float: left;
+					width: 30%;
+					height: 100%;
+
+					.header__myAccountWrap {
+						display: block;
+						float: left;
+						width: 100%;
 						height: 100%;
 						position: relative;
 
-						.horizontalNav__itemLink {
+						.header__myAccountText {
 							width: 100%;
 							margin-top: 5vh;
 							display: block;
 							color: #f2ebdd;
-							text-align: center;
+							text-align: right;
 							text-decoration: none;
 							font-family: Montserrat Black, sans-serif;
 							font-weight: 600;
@@ -144,130 +180,164 @@ $white: #ffffff;
 							}
 						}
 					}
-				}
-    		}
-    	}
+		    	}
 
-    	.header__myAccountWrap {
-    		display: block;
-			float: left;
-			width: 30%;
-			height: 100%;
+		    	.header__burgerMenuWrap {
+		    		&.burgerMenuWrap {
+		    			display: block;
+		    			float: left;
+		    			width: 10%;
+		    			height: 100%;
 
-			.header__myAccountWrap {
-				display: block;
-				float: left;
-				width: 100%;
-				height: 100%;
-				position: relative;
+		    			.burgerMenuWrap__burgerMenu {
+							position: relative;
+							top: 55%;
+							left: 50%;
+							@include transform(translate(-55%, -50%));
+							width: 50px;
+							height: 50px;
+							cursor: pointer;
+							z-index: 999;
 
-				.header__myAccountText {
-					width: 100%;
-					margin-top: 5vh;
-					display: block;
-					color: #f2ebdd;
-					text-align: right;
-					text-decoration: none;
-					font-family: Montserrat Black, sans-serif;
-					font-weight: 600;
-					font-size: 1.5vmin;
-					transition: all .5s;
+							.burgerMenuWrap__item {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 5px;
+								height: 5px;
+								background-color: $white;
+								border-radius: 10px;
+								@include transform(translate(-50%, -50%));
+								@include transition(margin .4s ease .4s, width .4s ease);
 
-					&:hover {
-						color: #e8ab56;
-					}
-				}
-			}
-    	}
+								&:nth-of-type(1) {
+									margin-top: -10px;
+									margin-left: -10px;
+									@include transform(translate(-50%, -50%) rotate(45deg));
+								}
 
-    	.header__burgerMenuWrap {
-    		&.burgerMenuWrap {
-    			display: block;
-    			float: left;
-    			width: 10%;
-    			height: 100%;
+								&:nth-of-type(2) {
+									margin-top: -10px;
+									@include transform(translate(-50%, -50%) rotate(-45deg));
+								}
 
-    			.burgerMenuWrap__burgerMenu {
-					position: relative;
-					top: 55%;
-					left: 50%;
-					@include transform(translate(-55%, -50%));
-					width: 50px;
-					height: 50px;
-					cursor: pointer;
-					z-index: 999;
+								&:nth-of-type(3) {
+									margin-top: -10px;
+									margin-left: 10px;
+								}
 
-					.burgerMenuWrap__item {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						width: 5px;
-						height: 5px;
-						background-color: $white;
-						border-radius: 10px;
-						@include transform(translate(-50%, -50%));
-						@include transition(margin .4s ease .4s, width .4s ease);
+								&:nth-of-type(4) {
+									margin-left: -10px;
+								}
 
-						&:nth-of-type(1) {
-							margin-top: -10px;
-							margin-left: -10px;
-							@include transform(translate(-50%, -50%) rotate(45deg));
-						}
+								&:nth-of-type(5) {  
 
-						&:nth-of-type(2) {
-							margin-top: -10px;
-							@include transform(translate(-50%, -50%) rotate(-45deg));
-						}
+								}
 
-						&:nth-of-type(3) {
-							margin-top: -10px;
-							margin-left: 10px;
-						}
+								&:nth-of-type(6) {
+									margin-left: 10px;
+								}
 
-						&:nth-of-type(4) {
-							margin-left: -10px;
-						}
+								&:nth-of-type(7) {
+									margin-top: 10px;
+									margin-left: -10px;
+								}
 
-						&:nth-of-type(5) {  
+								&:nth-of-type(8) {
+									margin-top: 10px;
+								}
 
-						}
-
-						&:nth-of-type(6) {
-							margin-left: 10px;
-						}
-
-						&:nth-of-type(7) {
-							margin-top: 10px;
-							margin-left: -10px;
-						}
-
-						&:nth-of-type(8) {
-							margin-top: 10px;
-						}
-
-						&:nth-of-type(9) {
-							margin-top: 10px;
-							margin-left: 10px;
-						}
-					}
-
-					&.clicked {
-						.burgerMenuWrap__item {
-							@include transition(margin .4s ease, width .4s ease .4s);
-								margin-left: 0;
-								margin-top: 0;
-
-							&:nth-of-type(1) {
-								width: 30px;
+								&:nth-of-type(9) {
+									margin-top: 10px;
+									margin-left: 10px;
+								}
 							}
 
-							&:nth-of-type(2) {
-								width: 30px;
+							&.clicked {
+								.burgerMenuWrap__item {
+									@include transition(margin .4s ease, width .4s ease .4s);
+										margin-left: 0;
+										margin-top: 0;
+
+									&:nth-of-type(1) {
+										width: 30px;
+									}
+
+									&:nth-of-type(2) {
+										width: 30px;
+									}
+								}
 							}
 						}
-					}
-				}
-    		}
-    	}
-    }
+		    		}
+		    	}
+		    }
+
+		    .mainContent {
+		    	width: 100%;
+		    	height: 80vh;
+
+		    	.mainContent__slider {
+		    		display: block;
+		    		float: left;
+		    		width: 45%;
+		    		height: 100%;
+		    		margin-left: 5%;
+
+		    		.swiper-container {
+		    			width: 100%;
+		    			height: 100%;
+
+		    			.swiper-slide {
+		    				font-size: 18px;
+		    				color: #fff;
+		    				padding: 40px 60px;
+
+		    				&.swiper-wrapper_bg {
+		    					background-position: center;
+		    					background-size: contain;
+		    					background-repeat: no-repeat;
+		    					background-color: transparent;
+		    				}
+
+		    				&.swiper-wrapper_bg_greenBikeInverse {
+		    					background-image: url('../image/greenBikeInverse.png')
+		    				}
+		    				&.swiper-wrapper_bg_redBikeInverse {
+		    					background-image: url('../image/redBikeInverse.png')
+		    				}
+		    				&.swiper-wrapper_bg_whiteBikeInverse {
+		    					background-image: url('../image/whiteBikeInverse.png')
+		    				}
+
+		    				.title {
+		    					margin-top: 20%;
+								font-family: Montserrat Black, sans-serif;
+								font-weight: 500;
+								font-size: 5vmin;
+		    				}
+		    				.subtitle {
+								margin-top: 2%;
+								font-family: Montserrat Black, sans-serif;
+								font-weight: 500;
+								font-size: 2vmin;
+		    				}
+		    				.text {
+								font-size: 14px;
+								max-width: 400px;
+								line-height: 1.3;
+		    				}
+		    			}
+		    		}
+		    	}
+		    }
+
+		}
+
+	    
+
+	    &:nth-of-type(2) {
+			background-color:red;
+		}
+	}
 }
