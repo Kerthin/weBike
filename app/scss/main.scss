@@ -65,14 +65,7 @@ $white: #ffffff;
 	background-color: #517C63;
 	transition: all 0.5s;
 	top: -100%;
-	// .m-menuItem	{
-	// 	text-align: center;
-	// 	.a-menuItem__link	{
-	// 		text-decoration: none;
-	// 		color: #fff;
-	// 		font-family: Arial, sans-serif;
-	// 	}
-	// }
+	
 	&_active	{
 		top:	0%;
 		z-index: 888;
