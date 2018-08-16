@@ -7,3 +7,8 @@
 	swiper.min.js
 ********************/
 //= partials/libs/swiper.min.js
+
+/********************
+	mousewheelSwiperInitializations.js
+********************/
+//= partials/mousewheelSwiperInitializations.js
