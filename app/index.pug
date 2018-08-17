@@ -96,4 +96,21 @@ html(lang="ru-RU")
 									- for (var i=1; i<=x; i++) {
 										.burgerMenuWrap__item
 									- }
+						article.contenWrap__topTextSliderWrap
+							p.contenWrap__topTextSlider Graphic design will save the world
+						.bicycleSwipeSlider.contenWrap__slider
+							.swiper-container.swiper-container-paralax
+								.swiper-wrapper
+									mixin swiperParalax(img, swiperParalaxTitle, swiperParalaxSubtitle, swiperParalaxText)
+										div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
+											.title(data-swiper-parallax="-400")= swiperParalaxTitle
+											.subtitle(data-swiper-parallax="-300")= swiperParalaxSubtitle
+											.text(data-swiper-parallax="-200")
+												p= swiperParalaxText
+									+swiperParalax('s2', 'Cannondale', 'Mountain Biking is an active recreation and adventure.', '')
+									+swiperParalax('s3', 'Colnago', 'Designed and built by hand in Italy.', '')
+									+swiperParalax('s4', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
+									+swiperParalax('s1', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
+						article.contenWrap__bottomTextSliderWrap
+							p.contenWrap__bottomTextSlider Graphic design will save the world
 		include template/scripts.pug
