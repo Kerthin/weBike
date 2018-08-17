@@ -31,7 +31,7 @@ html(lang="ru-RU")
 									.burgerMenuWrap__item
 								- }
 					section.mainContent
-						.mainContent__slider
+						.bicycleSwipeSlider.mainContent__slider
 							.swiper-container.swiper-container-paralax
 								.swiper-wrapper
 									mixin swiperParalax(img, swiperParalaxTitle, swiperParalaxSubtitle, swiperParalaxText)
@@ -43,6 +43,13 @@ html(lang="ru-RU")
 									+swiperParalax('greenBikeInverse', 'Cannondale', 'Mountain Biking is an active recreation and adventure.', '')
 									+swiperParalax('redBikeInverse', 'Colnago', 'Designed and built by hand in Italy.', '')
 									+swiperParalax('whiteBikeInverse', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
-						.mainContent__informationWrap
+						.informationWrap.mainContent__informationWrap
+							article.informationWrap__titleNameProjectWrap
+								h1.informationWrap__nameProjectTitle Wood Bikes
+							article.informationWrap__makeByWrap
+								p.informationWrap__makeByText Make by Kerthin
+							article.informationWrap__blockNumberWrap
+								h1.informationWrap__blockNumberTitle 05
+					
 				.swiper-slide
 		include template/scripts.pug
