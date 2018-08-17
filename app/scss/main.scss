@@ -9,8 +9,6 @@ body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color:#000;
-    margin: 0;
-    padding: 0;
 }
 $white: #ffffff;
 /*  MIXINS
@@ -65,10 +63,11 @@ $white: #ffffff;
 	background-color: #517C63;
 	transition: all 0.8s;
 	top: -100%;
+	z-index: 888;
+	opacity: .9;
 
 	&_active	{
 		top:	0%;
-		z-index: 888;
 	}
 }
 .swiper-container-mousewheel {
@@ -122,6 +121,10 @@ $white: #ffffff;
 							width: 100%;
 							height: 100%;
 
+							@media screen and (max-width: 1024px) {
+								display: none;
+							}
+
 							.horizontalNav__listItem {
 								display: block;
 								float: left;
@@ -162,6 +165,10 @@ $white: #ffffff;
 						width: 100%;
 						height: 100%;
 						position: relative;
+
+						@media screen and (max-width: 1024px) {
+							display: none;
+						}
 
 						.header__myAccountText {
 							width: 100%;
@@ -284,6 +291,10 @@ $white: #ffffff;
 		    		height: 100%;
 		    		margin-left: 5%;
 
+		    		@media screen and (max-width: 1024px) {
+						width: 90%;
+					}
+
 		    		.swiper-container {
 		    			width: 100%;
 		    			height: 100%;
@@ -311,7 +322,7 @@ $white: #ffffff;
 		    				}
 
 		    				.title {
-		    					margin-top: 20%;
+		    					margin-top: 30%;
 								font-family: Montserrat Black, sans-serif;
 								font-weight: 700;
 								font-size: 5vmin;
@@ -337,6 +348,10 @@ $white: #ffffff;
 		    		width: 45%;
 		    		height: 80vh;
 
+		    		@media screen and (max-width: 1024px) {
+						display: none;
+					}
+
 		    		.informationWrap__titleNameProjectWrap {
 		    			margin-top: 20vh;
 		    			width: 100%;
@@ -351,6 +366,10 @@ $white: #ffffff;
 							font-size: 9vmin;
 							color: #f2ebdd;
 							letter-spacing: 4px;
+
+							@media screen and (max-width: 1366px) {
+								font-size: 7vmin;
+							}
 		    			}
 		    		}
 		    		.informationWrap__makeByWrap {
@@ -425,6 +444,10 @@ $white: #ffffff;
 		    		float: left;
 		    		width: 20%;
 		    		height: 100%;
+
+		    		@media screen and (max-width: 1024px) {
+						display: none;
+					}
 		    	}
 		    	.footer__horizontalNavFooter {
 		    		&.horizontalNavFooter {
@@ -432,6 +455,10 @@ $white: #ffffff;
 		    			float: left;
 		    			width: 30%;
 		    			height: 100%;
+
+		    			@media screen and (max-width: 1024px) {
+							display: none;
+						}
 
 		    			.horizontalNavFooter__list {
 		    				width: 100%;
@@ -496,6 +523,10 @@ $white: #ffffff;
 			    		width: 50%;
 			    		height: 100%;
 
+			    		@media screen and (max-width: 1024px) {
+							width: 100%;
+						}
+
 			    		.mousewheelAnimation__mouse {
 			    			border: 2px solid #517c63;
 			    			border-radius: 13px;
@@ -506,6 +537,10 @@ $white: #ffffff;
 			    			float: right;
 			    			right: 5%;
 			    			bottom: 5vh;
+
+			    			@media screen and (max-width: 1024px) {
+								right: 48%;
+							}
 
 			    			.mousewheelAnimation__point {
 			    				animation-duration: 1s;
@@ -529,6 +564,10 @@ $white: #ffffff;
 			    			display: block;
 							margin-right: 15%;
 							margin-top: 2.5vh;
+
+							@media screen and (max-width: 1024px) {
+								display: none;
+							}
 
 							.mousewheelAnimation__text {
 								font-size: 1.5vmin;
