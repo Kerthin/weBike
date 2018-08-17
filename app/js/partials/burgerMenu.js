@@ -1,6 +1,13 @@
-$('.burgerMenuWrap__burgerMenu').click(function(){
-	menuBlock	=	$('.humburgerPopupMenu');
-
+$('#js-burgerDotMenuFirstSlide, #js-burgerDotMenuSecondSlide').click(function(){
 	$(this).toggleClass('clicked');
-	menuBlock.toggleClass('humburgerPopupMenu_active')
+});
+$('#js-burgerDotMenuFirstSlide').click(function(){
+	popupMenuFirstSlide	=	$('.humburgerPopupMenuFirstSlide');
+
+	popupMenuFirstSlide.toggleClass('humburgerPopupMenuFirstSlide_active');
+});
+$('#js-burgerDotMenuSecondSlide').click(function(){
+	popupMenuSecondSlide =	$('.humburgerPopupMenuSecondSlide');
+
+	popupMenuSecondSlide.toggleClass('humburgerPopupMenuSecondSlide_active');
 });

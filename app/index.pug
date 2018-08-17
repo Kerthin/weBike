@@ -6,11 +6,11 @@ html(lang="ru-RU")
 		.swiper-container.swiper-container-mousewheel
 			.swiper-wrapper
 				.swiper-slide
-					.humburgerPopupMenu
+					.humburgerPopupMenuFirstSlide
 					header.header
 						.header__logoWrap
 							.header__logo
-								p.header__logoText WE BIKE
+								p.header__logoText WE <br /> BIKE
 						nav.horizontalNav.header__horizontalNav
 							ul.horizontalNav__list
 								mixin horizontalListItemMix(link, nameLink)
@@ -26,7 +26,7 @@ html(lang="ru-RU")
 								a(class="header__myAccountText" href="#") My account
 						- var x = 9;
 						.burgerMenuWrap.header__burgerMenuWrap
-							ul.burgerMenuWrap__burgerMenu
+							ul#js-burgerDotMenuFirstSlide.burgerMenuWrap__burgerMenu
 								- for (var i=1; i<=x; i++) {
 									.burgerMenuWrap__item
 								- }
@@ -88,4 +88,12 @@ html(lang="ru-RU")
 									+swiperParalax('s3', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
 									+swiperParalax('s4', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
 					section.contenWrap
+						.humburgerPopupMenuSecondSlide
+						header.contenWrap__header
+							- var x = 9;
+							.burgerMenuWrap.contenWrap__burgerMenuWrap
+								ul#js-burgerDotMenuSecondSlide.burgerMenuWrap__burgerMenu
+									- for (var i=1; i<=x; i++) {
+										.burgerMenuWrap__item
+									- }
 		include template/scripts.pug
