@@ -416,12 +416,144 @@ $white: #ffffff;
 		    	}
 		    }
 
-		}
+		    .footer {
+		    	width: 100%;
+		    	height: 10vh;
 
-	    
+		    	.footer__circleSocialWrap {
+		    		display: block;
+		    		float: left;
+		    		width: 20%;
+		    		height: 100%;
+		    	}
+		    	.footer__horizontalNavFooter {
+		    		&.horizontalNavFooter {
+		    			display: block;
+		    			float: left;
+		    			width: 30%;
+		    			height: 100%;
+
+		    			.horizontalNavFooter__list {
+		    				width: 100%;
+		    				height: 100%;
+
+		    				.horizontalNavFooter__listItem {
+		    					display: block;
+		    					float: left;
+		    					width: 33.333333333%;
+		    					height: 100%;
+		    					position: relative;
+
+		    					.horizontalNavFooter__itemLink {
+		    						width: 100%;
+		    						margin-top: 2vh;
+		    						display: block;
+		    						color: #517c63;
+		    						text-align: center;
+		    						text-decoration: none;
+		    						font-family: Montserrat Black, sans-serif;
+		    						font-weight: 600;
+		    						font-size: 1.5vmin;
+		    						transition: all .5s;
+		    						line-height: 1;
+									display: inline-block;
+									text-decoration: none;
+									cursor: pointer;
+
+									&:hover {
+										color: #e8ab56;
+
+										&:after {
+											width: 100%;
+										}
+									}
+
+									&:after {
+										display: block;
+										content: "";
+										margin-top: -.8vh;
+										height: 2px;
+										width: 0;
+										background-color: #e8ab56;
+										transition: all .5s;
+									}
+
+									&:focus {
+										&:after {
+											width: 100%;
+										}
+									}
+		    					}
+		    				}
+		    			}
+		    		}
+		    	}
+
+		    	.footer__mousewheelAnimation {
+		    		&.mousewheelAnimation {
+			    		display: block;
+			    		float: left;
+			    		width: 50%;
+			    		height: 100%;
+
+			    		.mousewheelAnimation__mouse {
+			    			border: 2px solid #517c63;
+			    			border-radius: 13px;
+			    			display: block;
+			    			height: 36px;
+			    			position: absolute;
+			    			width: 20px;
+			    			float: right;
+			    			right: 5%;
+			    			bottom: 5vh;
+
+			    			.mousewheelAnimation__point {
+			    				animation-duration: 1s;
+			    				animation-fill-mode: both;
+			    				animation-iteration-count: infinite;
+			    				animation-name: scroll;
+			    				background: none repeat scroll 0 0 #517c63;
+			    				border: 1px solid transparent;
+			    				border-radius: 4px;
+			    				display: block;
+			    				height: 4px;
+			    				margin: 6px auto;
+			    				width: 4px;
+			    			}
+			    		}
+
+			    		.mousewheelAnimation__textWrap {
+			    			width: 20%;
+			    			height: 100%;
+			    			float: right;
+			    			display: block;
+							margin-right: 15%;
+							margin-top: 2.5vh;
+
+							.mousewheelAnimation__text {
+								font-size: 1.5vmin;
+								color: #517c63;
+								font-family: Montserrat Black, sans-serif;
+							}
+			    		}
+			    	}
+		    	}
+		    }
+		}
 
 	    &:nth-of-type(2) {
 			background-color:red;
 		}
+	}
+}
+
+@keyframes scroll {
+	0% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(20px);
 	}
 }

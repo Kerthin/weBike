@@ -50,6 +50,20 @@ html(lang="ru-RU")
 								p.informationWrap__makeByText Make by Kerthin
 							article.informationWrap__blockNumberWrap
 								h1.informationWrap__blockNumberTitle 05
-					
+					footer.footer
+						.footer__circleSocialWrap
+						nav.horizontalNavFooter.footer__horizontalNavFooter
+							ul.horizontalNavFooter__list
+								mixin horizontalFooterListItemMix(link, nameLink)
+									li.horizontalNavFooter__listItem
+										a(class="horizontalNavFooter__itemLink" href=(`${link}`))= nameLink
+								+horizontalFooterListItemMix('#', 'Facebook')
+								+horizontalFooterListItemMix('#', 'Instagram')
+								+horizontalFooterListItemMix('#', 'Twitter')
+						.mousewheelAnimation.footer__mousewheelAnimation
+							.mousewheelAnimation__mouse
+								span.mousewheelAnimation__point
+							.mousewheelAnimation__textWrap
+								p.mousewheelAnimation__text Scroll down
 				.swiper-slide
 		include template/scripts.pug
