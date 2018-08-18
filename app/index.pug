@@ -113,4 +113,13 @@ html(lang="ru-RU")
 									+swiperParalax('s1', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
 						article.contenWrap__bottomTextSliderWrap
 							p.contenWrap__bottomTextSlider Graphic design will save the world
+						footer.contenWrap__footer
+							nav.horizontalNavFooter.footer__horizontalNavFooter
+								ul.horizontalNavFooter__list
+									mixin horizontalFooterListItemMix(link, nameLink)
+										li.horizontalNavFooter__listItem
+											a(class="horizontalNavFooter__itemLink" href=(`${link}`))= nameLink
+									+horizontalFooterListItemMix('#', 'Facebook')
+									+horizontalFooterListItemMix('#', 'Instagram')
+									+horizontalFooterListItemMix('#', 'Twitter')
 		include template/scripts.pug

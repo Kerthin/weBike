@@ -907,6 +907,81 @@ $white: #ffffff;
 							color: #f2ebdd;
 						}
 					}
+
+					.contenWrap__footer {
+						position: absolute;
+						width: 100%;
+						height: 10vh;
+						bottom: 0;
+						background-color: #1d253d;
+
+						.footer__horizontalNavFooter {
+				    		&.horizontalNavFooter {
+				    			display: block;
+				    			float: left;
+				    			width: 30%;
+				    			height: 100%;
+
+				    			@media screen and (max-width: 1024px) {
+									display: none;
+								}
+
+				    			.horizontalNavFooter__list {
+				    				width: 100%;
+				    				height: 100%;
+
+				    				.horizontalNavFooter__listItem {
+				    					display: block;
+				    					float: left;
+				    					width: 33.333333333%;
+				    					height: 100%;
+				    					position: relative;
+
+				    					.horizontalNavFooter__itemLink {
+				    						width: 100%;
+				    						margin-top: 4vh;
+				    						display: block;
+				    						color: #f2ebdd;
+				    						text-align: center;
+				    						text-decoration: none;
+				    						font-family: Montserrat Black, sans-serif;
+				    						font-weight: 600;
+				    						font-size: 1.5vmin;
+				    						transition: all .5s;
+				    						line-height: 1;
+											display: inline-block;
+											text-decoration: none;
+											cursor: pointer;
+
+											&:hover {
+												color: #e8ab56;
+
+												&:after {
+													width: 100%;
+												}
+											}
+
+											&:after {
+												display: block;
+												content: "";
+												margin-top: -.8vh;
+												height: 2px;
+												width: 0;
+												background-color: #e8ab56;
+												transition: all .5s;
+											}
+
+											&:focus {
+												&:after {
+													width: 100%;
+												}
+											}
+				    					}
+				    				}
+				    			}
+				    		}
+				    	}
+					}
 				}
 			}
 		}
