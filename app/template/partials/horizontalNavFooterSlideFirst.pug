@@ -1,0 +1,8 @@
+nav.horizontalNavFooter.footer__horizontalNavFooter
+	ul.horizontalNavFooter__list
+		mixin horizontalFooterListItemMix(link, nameLink)
+			li.horizontalNavFooter__listItem
+				a(class="horizontalNavFooter__itemLink" href=(`${link}`))= nameLink
+		+horizontalFooterListItemMix('#', 'Facebook')
+		+horizontalFooterListItemMix('#', 'Instagram')
+		+horizontalFooterListItemMix('#', 'Twitter')

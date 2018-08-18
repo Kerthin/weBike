@@ -1,0 +1,10 @@
+nav.horizontalNav.header__horizontalNav
+	ul.horizontalNav__list
+		mixin horizontalListItemMix(link, nameLink)
+			li.horizontalNav__listItem
+				a(class="horizontalNav__itemLink" href=(`${link}`))= nameLink
+		+horizontalListItemMix('#', 'bike')
+		+horizontalListItemMix('#', 'outdoor')
+		+horizontalListItemMix('#', 'streewear')
+		+horizontalListItemMix('#', 'running')
+		+horizontalListItemMix('#', 'ski')

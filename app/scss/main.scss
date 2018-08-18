@@ -10,6 +10,10 @@ body {
     font-size: 14px;
     color:#000;
 }
+%alignment {
+	display: block;
+	float: left;
+}
 $white: #ffffff;
 /*  MIXINS
 ========================================= */
@@ -89,8 +93,7 @@ $white: #ffffff;
 		    	height: 10vh;
 
 		    	.header__logoWrap {
-					display: block;
-					float: left;
+					@extend %alignment;
 					width: 20%;
 					height: 100%;
 					
@@ -113,8 +116,7 @@ $white: #ffffff;
 
 		    	.header__horizontalNav {
 		    		&.horizontalNav {
-						display: block;
-						float: left;
+						@extend %alignment;
 						width: 40%;
 						height: 100%;
 
@@ -127,8 +129,7 @@ $white: #ffffff;
 							}
 
 							.horizontalNav__listItem {
-								display: block;
-								float: left;
+								@extend %alignment;
 								width: 20%;
 								height: 100%;
 								position: relative;
@@ -155,14 +156,12 @@ $white: #ffffff;
 		    	}
 
 		    	.header__myAccountWrap {
-		    		display: block;
-					float: left;
+		    		@extend %alignment;
 					width: 30%;
 					height: 100%;
 
 					.header__myAccountWrap {
-						display: block;
-						float: left;
+						@extend %alignment;
 						width: 100%;
 						height: 100%;
 						position: relative;
@@ -192,8 +191,7 @@ $white: #ffffff;
 
 		    	.header__burgerMenuWrap {
 		    		&.burgerMenuWrap {
-		    			display: block;
-		    			float: left;
+		    			@extend %alignment;
 		    			width: 10%;
 		    			height: 100%;
 
@@ -286,8 +284,7 @@ $white: #ffffff;
 		    	height: 80vh;
 
 		    	.mainContent__slider {
-		    		display: block;
-		    		float: left;
+		    		@extend %alignment;
 		    		width: 45%;
 		    		height: 100%;
 		    		margin-left: 5%;
@@ -344,8 +341,7 @@ $white: #ffffff;
 		    	}
 
 		    	.mainContent__informationWrap {
-		    		display: block;
-		    		float: left;
+		    		@extend %alignment;
 		    		width: 45%;
 		    		height: 80vh;
 
@@ -357,8 +353,7 @@ $white: #ffffff;
 		    			margin-top: 20vh;
 		    			width: 100%;
 		    			height: 10vh;
-		    			display: block;
-		    			float: left;
+		    			@extend %alignment;
 		    			text-align: left;
 
 		    			.informationWrap__nameProjectTitle {
@@ -376,8 +371,7 @@ $white: #ffffff;
 		    		.informationWrap__makeByWrap {
 		    			width: 100%;
 		    			height: 10vh;
-		    			display: block;
-		    			float: left;
+		    			@extend %alignment;
 		    			text-align: left;
 
 		    			.informationWrap__makeByText {
@@ -418,8 +412,7 @@ $white: #ffffff;
 		    		.informationWrap__blockNumberWrap {
 		    			width: 40%;
 		    			height: 20vh;
-		    			display: block;
-		    			float: left;
+		    			@extend %alignment;
 		    			background-color: #e8ab56;
 		    			padding: 4vh 0;
 		    			text-align: center;
@@ -441,8 +434,7 @@ $white: #ffffff;
 		    	height: 10vh;
 
 		    	.footer__circleSocialWrap {
-		    		display: block;
-		    		float: left;
+		    		@extend %alignment;
 		    		width: 20%;
 		    		height: 100%;
 
@@ -452,8 +444,7 @@ $white: #ffffff;
 		    	}
 		    	.footer__horizontalNavFooter {
 		    		&.horizontalNavFooter {
-		    			display: block;
-		    			float: left;
+		    			@extend %alignment;
 		    			width: 30%;
 		    			height: 100%;
 
@@ -466,8 +457,7 @@ $white: #ffffff;
 		    				height: 100%;
 
 		    				.horizontalNavFooter__listItem {
-		    					display: block;
-		    					float: left;
+		    					@extend %alignment;
 		    					width: 33.333333333%;
 		    					height: 100%;
 		    					position: relative;
@@ -519,8 +509,7 @@ $white: #ffffff;
 
 		    	.footer__mousewheelAnimation {
 		    		&.mousewheelAnimation {
-			    		display: block;
-			    		float: left;
+			    		@extend %alignment;
 			    		width: 50%;
 			    		height: 100%;
 
@@ -588,17 +577,27 @@ $white: #ffffff;
 				height: 100vh;
 
 				&:nth-of-type(1) {
-					display: block;
-					float: left;
+					@extend %alignment;
 					width: 60%;
+
+					@media screen and (max-width: 1366px) {
+						width: 50%;
+					}
+
+					@media screen and (max-width: 1024px) {
+						width: 100%;
+					}
 
 					.contenWrap__informationBox {
 						&.informationBox {
-							display: block;
-							float: left;
+							@extend %alignment;
 							width: 40%;
 							height: 100%;
 							background-color: #314943;
+
+							@media screen and (max-width: 1366px) {
+								width: 0%;
+							}
 
 							.informationBox__textWrap {
 								margin-top: 3vh;
@@ -654,10 +653,13 @@ $white: #ffffff;
 
 					.contenWrap__slider {
 						&.bicycleSwipeSlider {
-							display: block;
-							float: left;
+							@extend %alignment;
 							width: 60%;
 							height: 100%;
+
+							@media screen and (max-width: 1366px) {
+								width: 100%;
+							}
 
 							.swiper-container {
 				    			width: 100%;
@@ -712,8 +714,7 @@ $white: #ffffff;
 				}
 
 				&:nth-of-type(2) {
-					display: block;
-					float: left;
+					@extend %alignment;
 					width: 40%;
 					background-color: #314943;
 
@@ -732,14 +733,21 @@ $white: #ffffff;
 						}
 					}
 
+					@media screen and (max-width: 1366px) {
+						width: 50%;
+					}
+
+					@media screen and (max-width: 1024px) {
+						display: none;
+					}
+
 					.contenWrap__header {
 						width: 100%;
 						height: 10vh;
 
 						.contenWrap__burgerMenuWrap {
 							&.burgerMenuWrap {
-								display: block;
-								float: left;
+								@extend %alignment;
 								width: 20%;
 								height: 100%;
 
@@ -915,10 +923,9 @@ $white: #ffffff;
 						bottom: 0;
 						background-color: #1d253d;
 
-						.footer__horizontalNavFooter {
+						.contenWrap__horizontalNavFooter {
 				    		&.horizontalNavFooter {
-				    			display: block;
-				    			float: left;
+				    			@extend %alignment;
 				    			width: 30%;
 				    			height: 100%;
 
@@ -931,8 +938,7 @@ $white: #ffffff;
 				    				height: 100%;
 
 				    				.horizontalNavFooter__listItem {
-				    					display: block;
-				    					float: left;
+				    					@extend %alignment;
 				    					width: 33.333333333%;
 				    					height: 100%;
 				    					position: relative;
