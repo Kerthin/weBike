@@ -571,9 +571,8 @@ $white: #ffffff;
 		}
 
 	    &:nth-of-type(2) {
-			background-color:red;
 
-			.contenWrap {
+			.contentWrap {
 				height: 100vh;
 
 				&:nth-of-type(1) {
@@ -588,7 +587,7 @@ $white: #ffffff;
 						width: 100%;
 					}
 
-					.contenWrap__informationBox {
+					.contentWrap__informationBox {
 						&.informationBox {
 							@extend %alignment;
 							width: 40%;
@@ -651,7 +650,7 @@ $white: #ffffff;
 						}
 					}
 
-					.contenWrap__slider {
+					.contentWrap__slider {
 						&.bicycleSwipeSlider {
 							@extend %alignment;
 							width: 60%;
@@ -741,11 +740,11 @@ $white: #ffffff;
 						display: none;
 					}
 
-					.contenWrap__header {
+					.contentWrap__header {
 						width: 100%;
 						height: 10vh;
 
-						.contenWrap__burgerMenuWrap {
+						.contentWrap__burgerMenuWrap {
 							&.burgerMenuWrap {
 								@extend %alignment;
 								width: 20%;
@@ -835,18 +834,18 @@ $white: #ffffff;
 						}
 					}
 
-					.contenWrap__topTextSliderWrap {
+					.contentWrap__topTextSliderWrap {
 						width: 50%;
 						height: 5vmin;
 						margin: 22vh auto 0;
 
-						.contenWrap__topTextSlider {
+						.contentWrap__topTextSlider {
 							font-size: 2vmin;
 							color: #f2ebdd;
 						}
 					}
 
-					.contenWrap__slider {
+					.contentWrap__slider {
 						&.bicycleSwipeSlider {
 							width: 50%;
 							height: 30vh;
@@ -903,27 +902,27 @@ $white: #ffffff;
 						}
 					}
 
-					.contenWrap__bottomTextSliderWrap {
+					.contentWrap__bottomTextSliderWrap {
 						width: 50%;
 						height: 5vh;
 						margin: 0 auto;
 						text-align: right;
 
-						.contenWrap__bottomTextSlider {
+						.contentWrap__bottomTextSlider {
 							margin-top: 2vh;
 							font-size: 2vmin;
 							color: #f2ebdd;
 						}
 					}
 
-					.contenWrap__footer {
+					.contentWrap__footer {
 						position: absolute;
 						width: 100%;
 						height: 10vh;
 						bottom: 0;
 						background-color: #1d253d;
 
-						.contenWrap__horizontalNavFooter {
+						.contentWrap__horizontalNavFooter {
 				    		&.horizontalNavFooter {
 				    			@extend %alignment;
 				    			width: 30%;

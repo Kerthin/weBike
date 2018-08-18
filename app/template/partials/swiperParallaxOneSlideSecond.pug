@@ -1,0 +1,13 @@
+.bicycleSwipeSlider.contentWrap__slider
+	.swiper-container.swiper-container-paralax
+		.swiper-wrapper
+			mixin swiperParalax(img, swiperParalaxTitle, swiperParalaxSubtitle, swiperParalaxText)
+				div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
+					.title(data-swiper-parallax="-400")= swiperParalaxTitle
+					.subtitle(data-swiper-parallax="-300")= swiperParalaxSubtitle
+					.text(data-swiper-parallax="-200")
+						p= swiperParalaxText
+			+swiperParalax('s1', 'Cannondale', 'Mountain Biking is an active recreation and adventure.', '')
+			+swiperParalax('s2', 'Colnago', 'Designed and built by hand in Italy.', '')
+			+swiperParalax('s3', 'Pinarello', 'The Pinarello Bicycle is a symbiosis of stylish modern design.', '')
+			+swiperParalax('s4', 'Stels', 'Bicycles for those who are paving their route.', '')
